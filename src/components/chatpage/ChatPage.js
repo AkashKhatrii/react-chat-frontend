@@ -6,24 +6,14 @@ import { getUser } from '../../utils/getUser';
 import { AuthContext } from '../../context/AuthContext';
 const ChatPage = () => {
 
-  const { currentUser } = useContext(AuthContext)
-
-  // console.log("context", currentUser)
+  const { currentUser, setIsLogged } = useContext(AuthContext)
 
     const [ user, setUser ] = useState({});
     
     
-    // useEffect(() => {
-    //    fetchUser()
-    // }, [])
-
-    // const fetchUser = async () => {
-    //   const res = await getUser()
-    //   // console.log(res)
-    //   console.log("fu", res)
-    //   setUser(res.data.data.user)
-
-    // }
+    useEffect(() => {
+       setIsLogged(true)
+    }, [])
 
 
   return (

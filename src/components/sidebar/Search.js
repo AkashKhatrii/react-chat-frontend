@@ -11,7 +11,6 @@ const Search = () => {
   const [friend, setFriend] = useState(null);
   const [err, setErr] = useState(false);
 
-  console.log("search", currentUser)
   const handleSearch = async () => {
     const q = query(
       collection(db, "users"),
