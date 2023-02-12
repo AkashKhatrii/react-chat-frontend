@@ -13,7 +13,6 @@ export const AuthContextProvider =  ({ children }) => {
     useEffect(() => {
         axios.get('https://react-chat-backend.onrender.com/getuser', { withCredentials: true })
     .then(res => {
-        console.log("auth", res)
         setCurrentUser(res.data.data.user)
     }).catch(err => console.log(err))
     }, [isLogged]);
